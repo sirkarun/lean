@@ -1,0 +1,10 @@
+<form #kForm="ngForm" (submit)="onSubmit(kForm)">
+  <input name="first" ngModel #first="ngModel" minlength="5" required />
+  <input name="last" ngModel #last="ngModel" required />
+  <button>Submit</button>
+</form>
+
+<h1>{{ kForm.value | json | uppercase }}</h1>
+<h1>{{ kForm.valid }}</h1>
+<h1>{{ first.valid }}</h1>
+<h1>{{ last.valid }}</h1>

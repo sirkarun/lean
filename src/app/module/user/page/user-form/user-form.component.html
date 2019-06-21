@@ -1,0 +1,38 @@
+<form [formGroup]="userForm" (submit)="onFormSubmit()">
+  <div class="form-group">
+    <label for="userid">UserId</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="userId"
+      id="userid"
+      formControlName="userId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="name">name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="name"
+      id="name"
+      formControlName="name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      formControlName="password"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    save
+  </button>
+</form>
+
+<br />

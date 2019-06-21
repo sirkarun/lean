@@ -1,0 +1,12 @@
+<form [formGroup]="simpleForm" (submit)="onSubmit()">
+  <input formControlName="first" /><br />
+  <input formControlName="last" />
+  <button>Submit</button>
+</form>
+
+<h1>{{ simpleForm.value | json }}</h1>
+<h1>{{ simpleForm.valid }}</h1>
+<h1>{{ simpleForm.get('first').errors | json }}</h1>
+<h1>{{ simpleForm.get('first').invalid }}</h1>
+<h1>{{ simpleForm.get('first').status }}</h1>
+<h1>{{ simpleForm.get('first').statusChanges }}</h1>
